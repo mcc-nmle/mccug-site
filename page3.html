@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCC UG Art Sliders</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+    .rowdies-light {
+      font-family: "Rowdies", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+    
+    .rowdies-regular {
+      font-family: "Rowdies", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    .rowdies-bold {
+      font-family: "Rowdies", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+
+
+
+    *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  --position: 50%;
+}
+
+.image-container {
+  max-width: px;
+  max-height: vh;
+ 
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.image-before {
+  position: absolute;
+  inset: 0;
+  width: var(--position);
+
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  opacity: 0;
+  /* for Firefox */
+  width: 100%;
+  height: 100%;
+}
+
+.slider:focus-visible ~ .slider-button {
+  outline: 5px solid black;
+  outline-offset: 3px;
+}
+
+.slider-line {
+  position: absolute;
+  inset: 0;
+  width: .2rem;
+  height: 100%;
+  background-color: #fff;
+  /* z-index: 10; */
+  left: var(--position);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.slider-button {
+  position: absolute;
+  background-color: #fff;
+  color: black;
+  padding: .5rem;
+  border-radius: 100vw;
+  display: grid;
+  place-items: center;
+  top: 50%;
+  left: var(--position);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  /* z-index: 100; */
+  box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
+}
+    </style>
+
+
+
+
+</head>
+<body class="bg-gray-900  text-white h-screen justify-center rowdies-regular">
+
+  <div class="fixed top-0 w-full z-50 ">
+    <div class="mx-auto ">
+      <a href="index.html" class="mx-auto my-2 bg-blue-600 shadow w-64 mxauto  hover:bg-blue-700 flex items-center justify-center text-3xl font-bold rounded-2xl transition duration-300 ease-in-out shadow-lg">
+        Return
+      </a>
+    </div> </div>
+
+
+  
+
+
+
+<div>
+  <main>
+
+
+    <div class="sketchfab-embed-wrapper"> <iframe title="Frog" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="900" height="700" src="https://sketchfab.com/models/a4ce7f2f5e7849f4ac29ca51e2c7ad0d/embed?transparent=1"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/frog-a4ce7f2f5e7849f4ac29ca51e2c7ad0d?utm_medium=embed&utm_campaign=share-popup&utm_content=a4ce7f2f5e7849f4ac29ca51e2c7ad0d" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Frog </a> by <a href="https://sketchfab.com/mccug?utm_medium=embed&utm_campaign=share-popup&utm_content=a4ce7f2f5e7849f4ac29ca51e2c7ad0d" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> mccug </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=a4ce7f2f5e7849f4ac29ca51e2c7ad0d" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+
+  </main>
+</div>
+
+
+
+
+
+
+
+
+
+  <script>
+    const container = document.querySelector('.container');
+  document.querySelector('.slider').addEventListener('input', (e) => {
+    container.style.setProperty('--position', `${e.target.value}%`);
+  })
+  </script>
+
+
+
+
+
+
+</body>
+</html>
