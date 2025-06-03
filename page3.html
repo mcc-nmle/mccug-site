@@ -58,13 +58,13 @@ main {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  --position: 50%;
+  --position: 20%;
 }
 
 .image-container {
   max-width: px;
   max-height: vh;
- 
+
 }
 
 .slider-image {
@@ -78,7 +78,7 @@ main {
   position: absolute;
   inset: 0;
   width: var(--position);
-
+  
 }
 
 .slider {
@@ -131,6 +131,7 @@ main {
 </head>
 <body class="bg-gray-900  text-white h-screen justify-center rowdies-regular">
 
+
   <div class="fixed top-0 w-full z-50 ">
     <div class="mx-auto ">
       <a href="index.html" class="mx-auto my-2 bg-blue-600 shadow w-64 mxauto  hover:bg-blue-700 flex items-center justify-center text-3xl font-bold rounded-2xl transition duration-300 ease-in-out shadow-lg">
@@ -139,22 +140,100 @@ main {
     </div> </div>
 
 
+
   
 
 
 
 <div>
   <main>
-
-
-    <div class="sketchfab-embed-wrapper"> <iframe title="Frog" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="900" height="700" src="https://sketchfab.com/models/a4ce7f2f5e7849f4ac29ca51e2c7ad0d/embed?transparent=1"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/frog-a4ce7f2f5e7849f4ac29ca51e2c7ad0d?utm_medium=embed&utm_campaign=share-popup&utm_content=a4ce7f2f5e7849f4ac29ca51e2c7ad0d" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Frog </a> by <a href="https://sketchfab.com/mccug?utm_medium=embed&utm_campaign=share-popup&utm_content=a4ce7f2f5e7849f4ac29ca51e2c7ad0d" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> mccug </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=a4ce7f2f5e7849f4ac29ca51e2c7ad0d" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+    <div class="container">
+      <div class="image-container">
+        <img
+          class="image-before slider-image"
+         src="/webp/0javcon.webp"
+          alt="color photo"
+        />
+        <img
+          class="image-after slider-image"
+          src="/webp/0javmur.webp"
+          alt="black and white"
+        />
+      </div>
+      <!-- step="10" -->
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        aria-label="Percentage of before photo shown"
+        class="slider"
+      />
+      <div class="slider-line" aria-hidden="true"></div>
+      <div class="slider-button" aria-hidden="true">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="currentColor"
+          viewBox="0 0 256 256"
+        >
+          <rect width="256" height="256" fill="none"></rect>
+          <line
+            x1="128"
+            y1="40"
+            x2="128"
+            y2="216"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <line
+            x1="96"
+            y1="128"
+            x2="16"
+            y2="128"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <polyline
+            points="48 160 16 128 48 96"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></polyline>
+          <line
+            x1="160"
+            y1="128"
+            x2="240"
+            y2="128"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <polyline
+            points="208 96 240 128 208 160"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></polyline>
+        </svg>
+      </div>
+    </div>
 
   </main>
 </div>
-
-
-
-
 
 
 
